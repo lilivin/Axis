@@ -25,19 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-window.onscroll = function(){stickyStart()};
-
-let header = document.querySelector('#header');
-let sticky = header.offsetTop;
-
-function stickyStart() {
-    if(window.pageYOffset > sticky){
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
-    }
-}
-
 let sections = document.querySelectorAll('[data-navigation]');
 let nav_links = document.querySelectorAll('.header__navigation-link');
 
@@ -48,7 +35,7 @@ function isScrolledIntoView(el){
     let isVisible = (elemTop <= 400) && (elemBottom >= 400);
     if(isVisible){
         nav_links.forEach(link => {
-            let href = link.getAttribute('href');
+            let href = link.getAttribute('href').substr(1);
             let id = el.getAttribute('data-navigation');
             link.classList.remove('header__navigation-link--active');
             if(href == id){
@@ -113,5 +100,18 @@ if (mobile_close != null) {
             document.querySelector('.js-hamburger').classList.toggle("active");
         }
     });
+}
+
+window.onscroll = function(){stickyStart()};
+
+let header = document.querySelector('#header');
+let sticky = header.offsetTop;
+
+function stickyStart() {
+    if(window.pageYOffset > sticky){
+        header.classList.add('header--scrolled');
+    } else {
+        header.classList.remove('header--scrolled');
+    }
 }
 
