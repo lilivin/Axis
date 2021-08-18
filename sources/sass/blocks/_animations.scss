@@ -1,0 +1,199 @@
+.interactive-element {
+  position: relative;
+  transition: 600ms;
+  &.title--underline{
+    &.visible{
+      &:after{
+        width: 50px;
+      }
+    }
+  }
+  &.interactive-element--top{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1000ms;
+    &.visible{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  &.interactive-element--opacity{
+    opacity: 0;
+    transition: 1000ms;
+    &.visible{
+      opacity: 1;
+    }
+  }
+  &.interactive-element--opacity-left{
+    transform: translateX(-20px);
+    opacity: 0;
+    &.visible{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  &.interactive-element--opacity-right{
+    transform: translateX(20px);
+    opacity: 0;
+    &.visible{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-200 {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-300 {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-400 {
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-500 {
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-600 {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    transition-delay: 600ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-700 {
+    -webkit-transition-delay: 700ms;
+    -moz-transition-delay: 700ms;
+    -ms-transition-delay: 700ms;
+    -o-transition-delay: 700ms;
+    transition-delay: 700ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-800 {
+    -webkit-transition-delay: 800ms;
+    -moz-transition-delay: 800ms;
+    -ms-transition-delay: 800ms;
+    -o-transition-delay: 800ms;
+    transition-delay: 800ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-900 {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    transition-delay: 900ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1000 {
+    -webkit-transition-delay: 1000ms;
+    -moz-transition-delay: 1000ms;
+    -ms-transition-delay: 1000ms;
+    -o-transition-delay: 1000ms;
+    transition-delay: 1000ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1100 {
+    -webkit-transition-delay: 1100ms;
+    -moz-transition-delay: 1100ms;
+    -ms-transition-delay: 1100ms;
+    -o-transition-delay: 1100ms;
+    transition-delay: 1100ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1200 {
+    -webkit-transition-delay: 1200ms;
+    -moz-transition-delay: 1200ms;
+    -ms-transition-delay: 1200ms;
+    -o-transition-delay: 1200ms;
+    transition-delay: 1200ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1300 {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1400 {
+    -webkit-transition-delay: 1400ms;
+    -moz-transition-delay: 1400ms;
+    -ms-transition-delay: 1400ms;
+    -o-transition-delay: 1400ms;
+    transition-delay: 1400ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  &.interactive-element--delay-1500 {
+    -webkit-transition-delay: 1500ms;
+    -moz-transition-delay: 1500ms;
+    -ms-transition-delay: 1500ms;
+    -o-transition-delay: 1500ms;
+    transition-delay: 1500ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes scaleAndFadeOut {
+  0%{
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}

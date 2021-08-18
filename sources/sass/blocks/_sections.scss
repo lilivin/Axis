@@ -1,0 +1,37 @@
+.section{
+    &.section--padding{
+        padding: 75px 0;
+    }
+    &.section--main-section{
+        background-image: url(../../../dist/images/main-section-background.png);
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 84px;
+    }
+    &.section--social-media{
+        position: relative;
+        -webkit-box-shadow: -1px -27px 33px 10px #000000;
+        box-shadow: -1px -27px 33px 10px #000000;
+    }
+    &.section--gray{
+        background: #f5f5f5;
+    }
+    &.section--parallax{
+        background-image: url(../../../dist/images/background-stylish-axure-design.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 769px){
+    .section {
+        &.section--padding {
+            padding: 60px 0;
+        }
+    }
+}

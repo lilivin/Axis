@@ -1,0 +1,44 @@
+.main-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title{
+        margin-top: 20px;
+    }
+    &__content{
+        width: 50%;
+    }
+    &__content-text{
+        margin-top: 55px;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+    &__form{
+        width: 30%;
+        max-width: 360px;
+    }
+}
+
+@media(max-width: 1000px){
+    .main-section{
+        &__form{
+            width: 40%;
+            max-width: 400px;
+        }
+    }
+}
+
+@media(max-width: 769px){
+    .main-section{
+        display: block;
+        &__form{
+            max-width: 100%;
+            width: 100%;
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+        &__content{
+            width: 100%;
+        }
+    }
+}

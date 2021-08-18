@@ -1,0 +1,34 @@
+.tabs-mobile{
+  position: relative;
+  display: none;
+  &__button{
+    background: #ff8b38;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: -2px 1px 15px -1px rgba(0,0,0,0.38);
+    box-shadow: -2px 1px 15px -1px rgba(0,0,0,0.38);
+  }
+  &__content{
+    position: relative;
+    overflow-y: hidden;
+    transition: 300ms;
+    box-sizing: border-box;
+    .button{
+      margin-bottom: 30px;
+    }
+  }
+  &__single-tab-text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media(max-width: 600px){
+  .tabs-mobile{
+    display: block;
+  }
+}

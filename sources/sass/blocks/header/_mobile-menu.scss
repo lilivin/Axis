@@ -1,0 +1,19 @@
+#mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: calc(100% - 40px);
+  height: calc(100% - -18px);
+  transform: translateX(-100%);
+  transition: 300ms;
+  background: #000;
+  border-right: 1px solid #000;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+  padding: 36px 20px 30px;
+  margin-top: 60px;
+  &.toggled {
+    transform: translateX(0);
+  }
+}

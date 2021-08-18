@@ -1,0 +1,68 @@
+.screen-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &.screen-section--reverse{
+    flex-direction: row-reverse;
+    .screen-section__image{
+      margin-right: 30px;
+      margin-left: 0;
+    }
+  }
+  &__list{
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  &__list-item{
+    min-height: 40px;
+    padding-left: 20px;
+    &:before{
+      content: url(/dist/images/download-icon.png);
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+    }
+    p{
+      margin-top: 5px;
+    }
+  }
+  &__half{
+    width: 50%;
+  }
+  &__image{
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 1000px){
+  .screen-section{
+    &__image-container{
+      width: 50%;
+      &:before{
+        width: 100%;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 769px){
+  .screen-section{
+    display: block;
+    &__half{
+      width: 100%;
+    }
+    &__image{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

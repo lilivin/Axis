@@ -1,0 +1,17 @@
+.footer{
+  background: #000000;
+  padding: 20px 0 10px;
+  .social-media{
+    justify-content: center;
+    padding: 10px 0;
+    &__icons{
+      .fab{
+        font-size: 24px;
+      }
+    }
+  }
+  &__text{
+    text-align: center;
+    font-size: 12px;
+  }
+}
