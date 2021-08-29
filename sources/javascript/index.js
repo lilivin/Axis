@@ -1,6 +1,11 @@
 import ChangeTabsContent from "./changeTabsContent.js";
 import ChangeTabsContentMobile from "./changeTabsContentMobile.js";
 import StartInteractiveElements from "./StartInteractiveElements.js";
+import MobileMenu from "./mobileMenu.js";
+import StickyHeader from "./stickyHeader.js";
+import ScrollSpy from "./scrollSpy.js";
+
+new StickyHeader();
 
 let tabsMobile = document.querySelectorAll('.js-tabs-mobile');
 if(tabsMobile.length > 0){
@@ -16,36 +21,19 @@ if(tabsContainer.length > 0){
     });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    let interactiveElements = document.querySelectorAll('.interactive-element');
-    if(interactiveElements.length > 0){
-        interactiveElements.forEach(element => {
-           new StartInteractiveElements(element);
-        });
-    }
-});
+let mobile_menus = document.querySelectorAll('.js-mobile-menu');
+if(mobile_menus !== null){
+    mobile_menus.forEach(mobile_menu => {
+        new MobileMenu(mobile_menu);
+    });
+}
 
-let sections = document.querySelectorAll('[data-navigation]');
-let nav_links = document.querySelectorAll('.header__navigation-link');
-
-function isScrolledIntoView(el){
-    let rect = el.getBoundingClientRect();
-    let elemTop = rect.top;
-    let elemBottom = rect.bottom;
-    let isVisible = (elemTop <= 400) && (elemBottom >= 400);
-    if(isVisible){
-        nav_links.forEach(link => {
-            let href = link.getAttribute('href').substr(1);
-            let id = el.getAttribute('data-navigation');
-            link.classList.remove('header__navigation-link--active');
-            if(href == id){
-                link.classList.add('header__navigation-link--active');
-            } else if(id == 'main-section'){
-                link.classList.remove('header__navigation-link--active');
-            }
-        })
-    }
-};
+let header_navigation = document.querySelectorAll('.js-scroll-spy');
+if(header_navigation !== null){
+    header_navigation.forEach(element => {
+       new ScrollSpy(element);
+    });
+}
 
 window.addEventListener('scroll', () => {
     let interactiveElements = document.querySelectorAll('.interactive-element');
@@ -54,64 +42,16 @@ window.addEventListener('scroll', () => {
             new StartInteractiveElements(element);
         });
     }
-
-    sections.forEach(section => {
-        isScrolledIntoView(section);
-    });
 });
 
-function toggleMenu(){
-    let menu = document.querySelector('#mobile-menu');
-    let mask = document.querySelector('#mask');
-    let wrapper = document.querySelector('#wrapper');
-    let content = document.querySelector('#content');
-    document.querySelector('.js-hamburger').classList.toggle("active");
-    menu.classList.toggle("toggled");
-    mask.classList.toggle('shown');
-    content.classList.toggle("toggled");
-    if(menu.classList.contains("toggled")) {
-        document.body.style.overflow = 'hidden';
-        document.querySelector('html').style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-        document.querySelector('html').style.overflow = 'auto';
+window.addEventListener('DOMContentLoaded', () => {
+    let interactiveElements = document.querySelectorAll('.interactive-element');
+    if(interactiveElements.length > 0){
+        interactiveElements.forEach(element => {
+            new StartInteractiveElements(element);
+        });
     }
-}
+});
 
-let hamburger = document.querySelector('.js-hamburger');
-if(hamburger !== null){
-    hamburger.addEventListener('click', event => {
-        event.preventDefault();
-        toggleMenu();
-    });
-}
 
-let mobile_close = document.querySelector('.js-mobile-close');
-if (mobile_close != null) {
-    mobile_close.addEventListener('click', function(e) {
-        let menu = document.querySelector('#mobile-menu');
-        if (menu != null && menu.classList.contains('toggled')) {
-            let mask = document.querySelector('#mask');
-            e.preventDefault();
-            document.body.style.overflow = 'initial';
-            document.querySelector('html').style.overflow = 'initial';
-            menu.classList.remove('toggled');
-            mask.classList.remove('shown');
-            document.querySelector('.js-hamburger').classList.toggle("active");
-        }
-    });
-}
-
-window.onscroll = function(){stickyStart()};
-
-let header = document.querySelector('#header');
-let sticky = header.offsetTop;
-
-function stickyStart() {
-    if(window.pageYOffset > sticky){
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
-    }
-}
 

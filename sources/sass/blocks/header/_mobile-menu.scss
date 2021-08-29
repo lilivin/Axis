@@ -1,4 +1,4 @@
-#mobile-menu {
+.mobile-menu {
   position: fixed;
   left: 0;
   top: 0;
@@ -12,8 +12,28 @@
   max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 36px 20px 30px;
-  margin-top: 60px;
+  margin-top: 55px;
   &.toggled {
     transform: translateX(0);
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__list-item{
+    font-size: 22px;
+    line-height: 28px;
+  }
+  &__list-item-link{
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
   }
 }

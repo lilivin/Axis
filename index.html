@@ -11,10 +11,10 @@
 <body>
     <header id="header" class="header">
         <div class="container">
-            <a href="#main-section">
+            <a href="#main-section" data-element="mobile-navigation">
                 <img class="header__logo" src="./dist/images/logo-small.png" alt="Axit Logo"/>
             </a>
-            <ul class="header__navigation">
+            <ul class="header__navigation js-scroll-spy">
                 <li class="header__navigation-item">
                     <a class="header__navigation-link" href="#features">Features</a>
                 </li>
@@ -31,13 +31,13 @@
                     <a class="header__navigation-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <a href="#" class="hamburger js-hamburger">
+            <div id="hamburger" class="hamburger">
                 <div class="lines">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </a>
+            </div>
         </div>
     </header>
     <section id="main-section" data-navigation="main-section" class="section section--main-section">
@@ -115,7 +115,7 @@
                 Tab1
             </div>
             <div data-tab="1" class="tabs-mobile__content">
-                <h3 class="title title--basic title--bold title--black">Tab with soft transitioning effect3.</h3>
+                <h3 class="title title--basic title--bold title--black">Tab with soft transitioning effect.</h3>
                 <div class="tabs-mobile__single-tab-text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
@@ -126,7 +126,7 @@
                 Tab2
             </div>
             <div data-tab="2" class="tabs-mobile__content">
-                <h3 class="title title--basic title--bold title--black">Tab with soft transitioning effect3.</h3>
+                <h3 class="title title--basic title--bold title--black">Software top product</h3>
                 <div class="tabs-mobile__single-tab-text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
@@ -318,7 +318,7 @@
             </form>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer js-mobile-menu">
         <div class="social-media">
             <div class="social-media__icons">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -332,7 +332,24 @@
         <div class="footer__text">
             © 2015 Axure Themes
         </div>
-        <div id="mobile-menu" class="mobile-menu js-mobile-menu">
+        <div id="mobile-menu" class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__list-item">
+                    <a class="mobile-menu__list-item-link" data-element="mobile-navigation" href="#features">Features</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                    <a class="mobile-menu__list-item-link" data-element="mobile-navigation" href="#about">About</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                    <a class="mobile-menu__list-item-link" data-element="mobile-navigation" href="#pricing">Pricing</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                    <a class="mobile-menu__list-item-link" data-element="mobile-navigation" href="#reviews">Reviews</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                    <a class="mobile-menu__list-item-link" data-element="mobile-navigation" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>

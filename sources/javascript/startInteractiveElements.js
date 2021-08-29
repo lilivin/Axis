@@ -1,6 +1,6 @@
 class StartInteractiveElements{
-    constructor(selector) {
-        this.selector = selector;
+    constructor(element) {
+        this.element = element;
         let window_height = window.innerHeight;
         let window_top = document.body.scrollTop - 100;
         if (document.body.clientWidth <= 600) {
@@ -8,12 +8,12 @@ class StartInteractiveElements{
         }
         let window_bottom = (window_top + window_height);
 
-        let element_height = this.selector.clientHeight;
-        let element_top = document.body.scrollTop + this.selector.getBoundingClientRect().top;
+        let element_height = this.element.clientHeight;
+        let element_top = document.body.scrollTop + this.element.getBoundingClientRect().top;
         let element_bottom = (element_top + element_height) - 20;
 
         if ((element_bottom >= window_top) && element_top <= window_bottom) {
-            this.selector.classList.add('visible');
+            this.element.classList.add('visible');
         }
     }
 }

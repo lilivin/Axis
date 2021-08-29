@@ -9,7 +9,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  transition: 500ms;
   right: 0;
   .label {
     font-size: 16px;
@@ -37,6 +36,8 @@
   &.active{
     position: fixed;
     right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
     .lines {
       span {
         height: 2px;

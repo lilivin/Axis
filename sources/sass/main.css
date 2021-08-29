@@ -49,8 +49,8 @@
 
 @media (max-width: 1000px) {
   .header.header--scrolled {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .header.header--scrolled .header__logo {
     max-width: 90px;
@@ -70,7 +70,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  transition: 500ms;
   right: 0;
 }
 .hamburger .label {
@@ -99,6 +98,8 @@
 .hamburger.active {
   position: fixed;
   right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 .hamburger.active .lines span {
   height: 2px;
@@ -122,7 +123,7 @@
     display: flex;
   }
 }
-#mobile-menu {
+.mobile-menu {
   position: fixed;
   left: 0;
   top: 0;
@@ -136,10 +137,30 @@
   max-height: calc(100vh - 120px);
   overflow: auto;
   padding: 36px 20px 30px;
-  margin-top: 60px;
+  margin-top: 55px;
 }
-#mobile-menu.toggled {
+.mobile-menu.toggled {
   transform: translateX(0);
+}
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mobile-menu__list-item {
+  font-size: 22px;
+  line-height: 28px;
+}
+.mobile-menu__list-item-link {
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+  text-decoration: none;
 }
 
 .main-section {
@@ -562,12 +583,10 @@ body {
   .social-media__icons {
     margin-top: 30px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media (max-width: 500px) {
-  .social-media__icons {
-    justify-content: center;
-  }
   .social-media__icons .fab {
     margin-bottom: 20px;
   }
